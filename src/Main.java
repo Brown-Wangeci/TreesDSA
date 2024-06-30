@@ -88,8 +88,7 @@ public class Main {
     //Inserting/Adding new nodes
     public static Node insert(Node node, int data){
         if(node == null){
-            Node newNode = new Node(data);
-            return newNode;
+            return new Node(data);
         } else if (data < node.data) {
             node.left = insert(node.left, data);
         } else if (data > node.data) {
