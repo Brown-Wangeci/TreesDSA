@@ -24,6 +24,7 @@ public class Main {
 
 
         insert(root, 9);
+        Node lowestVal = lowestValue(root);
 
 
         //Printing the tree's node in console using different traversal methods
@@ -39,6 +40,8 @@ public class Main {
         System.out.println("\nThis is the post-order traversal result");
         postOrderTraversal(root);
         System.out.println();//For spacing
+
+        System.out.print("\nThe lowest value is: " + lowestVal.data);
 
     }
 
@@ -84,5 +87,15 @@ public class Main {
             node.right = insert(node.right, data);
         }
         return node;
+    }
+    public static Node deleteNode(Node node, int data){
+        
+    }
+    public static Node lowestValue(Node node){
+        if(node.left == null){
+            return node;
+        }else{
+            return lowestValue(node.left);
+        }
     }
 }
