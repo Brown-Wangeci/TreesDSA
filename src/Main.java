@@ -23,6 +23,9 @@ public class Main {
         seventh.left = eighth;
 
 
+        insert(root, 9);
+
+
         //Printing the tree's node in console using different traversal methods
         System.out.println("This is the pre-order traversal result");
         preOrderTraversal(root);
@@ -70,5 +73,16 @@ public class Main {
             System.out.print(node.data + " ,");
             inOrderTraversal(node.right);
         }
+    }
+    public static Node insert(Node node, int data){
+        if(node == null){
+            Node newNode = new Node(data);
+            return newNode;
+        } else if (node.data > data) {
+            node.left = insert(node.left, data);
+        } else if (node.data < data) {
+            node.right = insert(node.right, data);
+        }
+        return node;
     }
 }
