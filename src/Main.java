@@ -27,17 +27,17 @@ public class Main {
         insert(root, 9);
         deleteNode(root, 5);
         Node lowestVal = lowestValue(root);
-        Node seven = valueSearch(root, 1);
+        Node one = valueSearch(root, 1);
 
 
         //Printing the tree's node in console using different traversal methods
         System.out.println("This is the pre-order traversal result");
         preOrderTraversal(root);
-        System.out.println();
+        System.out.println();//For spacing
 
         System.out.println(" \nThis is the in-order traversal result");
         inOrderTraversal(root);
-        System.out.println();
+        System.out.println();//For spacing
 
 
         System.out.println("\nThis is the post-order traversal result");
@@ -47,7 +47,7 @@ public class Main {
         System.out.print("\nThe lowest value is: " + lowestVal.data);
         System.out.println();
 
-        System.out.println("\nNumber seven after valueSearch function: " + seven.data);
+        System.out.println("\nNumber one after valueSearch function: " + one.data);
         System.out.println();
 
     }
